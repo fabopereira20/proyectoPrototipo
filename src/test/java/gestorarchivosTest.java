@@ -63,4 +63,56 @@ class gestorarchivosTest {
     @Test
     void testListaArchivos() {
     }
+
+    @Test
+    void testCrearDirectorio1() {
+    }
+
+    @Test
+    void testCrearArchivo1() {
+    }
+
+    @Test
+    void testLeerArchivo1() {
+    }
+
+    @Test
+    void testCopiarArchivo1() {
+    }
+
+    @Test
+    void testNuevaLinea1() {
+    }
+
+    @Test
+    void testEliminarArchivo1() {
+    }
+
+    @Test
+    void testListaArchivos1() {
+    }
+
+    @Test
+    void mostrarArreglo() {
+    }
+
+    @Test
+    void crearArreglo() {
+    }
+
+    @Test
+    void testCrearArreglo() {
+    }
+
+    @Test
+    void testCrearArreglo1() {
+    }
+
+    @Test
+    void llenarArreglo() {
+    }
+
+    @Test
+    void testLlenarArreglo() {
+    }
 }

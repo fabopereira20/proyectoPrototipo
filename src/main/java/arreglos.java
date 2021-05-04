@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.util.Random;
 
 public class arreglos {
@@ -75,4 +76,11 @@ public class arreglos {
         System.out.println(a);
     }
 
+    public static int convertirstringInt(String numero) {
+        numero.trim();
+        numero.replaceAll(" ", "");
+
+        int numEntero = Integer.parseInt(numero);
+        return numEntero;
+    }
 }

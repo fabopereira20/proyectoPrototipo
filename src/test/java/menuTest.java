@@ -31,4 +31,28 @@ class menuTest {
     @Test
     void menudatos() {
     }
+
+    @Test
+    void testLeerOpcion() {
+    }
+
+    @Test
+    void testMostarMenu() {
+    }
+
+    @Test
+    void testLeerNumero() {
+    }
+
+    @Test
+    void testValidarNumero() {
+    }
+
+    @Test
+    void testMenudatos() {
+    }
+
+    @Test
+    void region() {
+    }
 }
