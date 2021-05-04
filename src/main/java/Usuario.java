@@ -9,6 +9,8 @@ public class Usuario {
         Scanner teclado =new Scanner(System.in);
        // gestorarchivos.crearArchivo();
 
+
+
         int salir = 1;
         do{
             menu.mostarMenu();

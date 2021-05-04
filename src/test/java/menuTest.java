@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -54,5 +56,37 @@ class menuTest {
 
     @Test
     void region() {
+    }
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @Test
+    void testLeerOpcion1() {
+    }
+
+    @Test
+    void testMostarMenu1() {
+    }
+
+    @Test
+    void testLeerNumero1() {
+    }
+
+    @Test
+    void testValidarNumero1() {
+    }
+
+    @Test
+    void testMenudatos1() {
+    }
+
+    @Test
+    void testRegion() {
     }
 }

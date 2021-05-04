@@ -40,7 +40,7 @@ public class menu {
         return true;
     } // valida que el número entero ingresado esté en el rango permitido
 
-    public static void menudatos() { /*informacion necesaria para cobrar el cargo fijo de luz y agua*/
+    public static void menudatos() {
         System.out.println("**********************************************************");
         System.out.println("*    region de residencia                               *");
         System.out.println("[0] Región de Arica y Parinacota.");
@@ -58,7 +58,10 @@ public class menu {
         System.out.println("[15] Región de Magallanes y la Antártica Chilena.");
         System.out.println("**********************************************************");
 
-    }
+    }/*informacion necesaria para cobrar el cargo fijo de luz y agua*/
+
+
+
         public static String region (String opcion){
             int opcion2=arreglos.convertirstringInt(opcion);
 

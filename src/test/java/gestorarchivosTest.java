@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -114,5 +116,65 @@ class gestorarchivosTest {
 
     @Test
     void testLlenarArreglo() {
+    }
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @Test
+    void testCrearDirectorio2() {
+    }
+
+    @Test
+    void testCrearArchivo2() {
+    }
+
+    @Test
+    void testLeerArchivo2() {
+    }
+
+    @Test
+    void testCopiarArchivo2() {
+    }
+
+    @Test
+    void testNuevaLinea2() {
+    }
+
+    @Test
+    void testEliminarArchivo2() {
+    }
+
+    @Test
+    void testListaArchivos2() {
+    }
+
+    @Test
+    void testMostrarArreglo() {
+    }
+
+    @Test
+    void testCrearArreglo2() {
+    }
+
+    @Test
+    void testCrearArreglo3() {
+    }
+
+    @Test
+    void testCrearArreglo4() {
+    }
+
+    @Test
+    void testLlenarArreglo1() {
+    }
+
+    @Test
+    void testLlenarArreglo2() {
     }
 }

@@ -2,15 +2,15 @@ import java.text.ParseException;
 import java.util.Random;
 
 public class arreglos {
-    public static void mostrarArreglo(int[] arreglo) {   //mostrar arreglo
+    public static void mostrarArreglo(int[] arreglo) {
         for (int i = 0; i < arreglo.length; i++) {
             System.out.println("[" + arreglo[i] + "]");
 
         }
         System.out.println("s");
-    }
+    }//mostrar arreglo
 
-    public static int[] crearArreglo() {       //metodo 1
+    public static int[] crearArreglo() {
         Random rnum = new Random();
 
         int[] arr = new int[10];
@@ -19,7 +19,8 @@ public class arreglos {
 
         }
         return arr;
-    }
+    }//crea arreglos con numeros random
+
 
     public static int[] crearArreglo(int largo) {       // metodo 1: largo
         Random rnum = new Random();
@@ -33,19 +34,11 @@ public class arreglos {
         }
         System.err.println(arr);
         return arr;
-    }
+    }//Crea un arreglo con largo a ingresar
 
-    public static int[] crearArreglo(int largo, int incio, int fin) { //crear arreeglo con v.2.5 con recursividad
 
-        if (largo <= 0) {
-            largo = 1;
-        }
-        int[] arr = new int[largo];
-        llenarArreglo(arr, incio, fin);
-        return arr;
-    }
 
-    public static void llenarArreglo(int[] a) {       //metodo 2
+    public static void llenarArreglo(int[] a) {
         Random rnum = new Random();
 
         for (int i = 0; i < a.length; i++) {
@@ -53,9 +46,9 @@ public class arreglos {
 
         }
         System.out.println(a);
-    }
+    }//llena un arreglo vacio con numeros randoms
 
-    public static void llenarArreglo(int[] a, int inicio, int fin) {       //metodo v2.0
+    public static void llenarArreglo(int[] a, int inicio, int fin) {
         if (inicio > fin) {
             int aux = fin;
             fin = inicio;
@@ -82,5 +75,5 @@ public class arreglos {
 
         int numEntero = Integer.parseInt(numero);
         return numEntero;
-    }
+    }//convierte un string a entero con la clase Integer y de su método "parseInt"
 }
