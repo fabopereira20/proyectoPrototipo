@@ -7,4 +7,8 @@ class UsuarioTest {
     @Test
     void main() {
     }
+
+    @Test
+    void testMain() {
+    }
 }

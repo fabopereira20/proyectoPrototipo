@@ -9,29 +9,37 @@ public class Usuario {
         Scanner teclado =new Scanner(System.in);
        // gestorarchivos.crearArchivo();
 
-        while (true) {
+        int salir = 0;
+        do{
             menu.mostarMenu();
-            menu.menudatos();
+            var option2 = menu.leerOpcion();
+            
 
-            var option = menu.leerOpcion();
-            System.out.println(menu.region(option));
 
-            switch (option) {
-                case "b":
 
+            switch (option2) {
+                case "1":
+                    salir=1;
                     break;
-                case "d":
-
+                case "2":
+                    salir=1;
                     break;
-
-
-
-                case "s":
+                case "3":
+                    menu.menudatos();
+                    var option1 = menu.leerOpcion();
+                    System.out.println(menu.region(option1));
+                    salir=1;
                     break;
+                case "4":
+                    salir=-1;
+                    break;
+                    
+
 
 
             }
-        }
+        
+        }while (salir>0);
 
     } // inicializa ejecucion del programa
 

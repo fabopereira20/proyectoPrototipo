@@ -23,9 +23,10 @@ public class menu {
     public static void mostarMenu() {
         System.out.println("**********************************************************");
         System.out.println("*    inicio del programa                                 *");
-        System.out.println("*   [1] Registre una cuenta                              *");
-        System.out.println("*   [2] Inicie sesion                                    *");
-        System.out.println("*   [3] Salir                                            *");
+        System.out.println("*   [1] Registre una cuenta(enproceso)                   *");
+        System.out.println("*   [2] Inicie sesion(en proceso)                        *");
+        System.out.println("*   [3] omitir                                           *");
+        System.out.println("*   [4] Salir                                            *");
         System.out.println("**********************************************************");
     } //imprime en pantalla las opciones del programa
 
