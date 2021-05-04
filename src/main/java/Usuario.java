@@ -9,7 +9,7 @@ public class Usuario {
         Scanner teclado =new Scanner(System.in);
        // gestorarchivos.crearArchivo();
 
-        int salir = 0;
+        int salir = 1;
         do{
             menu.mostarMenu();
             var option2 = menu.leerOpcion();
