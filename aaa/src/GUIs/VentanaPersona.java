@@ -13,24 +13,26 @@ public class VentanaPersona extends JFrame implements ActionListener {
 
     private final JTextField nombrePersonaInput;
     private final JButton crearPersonaButton;
-    private final JComboBox<String> claseRecurosComboBox;
+    private final JLabel labelNombrePersona, labelTipoRecurso, labelTipoRecurso2;
+    private final JPanel mainContainer, inputPanel, panelTipoRecurso, buttonPanel;
+    private final JComboBox<String> claseRecursosComboBox;
     private final ButtonGroup grupoRadioButtons;
 
-
     public VentanaPersona() {
-        setTitle("Recourse Handler");
-        JPanel mainContainer = new JPanel();
+        setTitle("Resource Handler"); // corrección ortográfica
+
+        mainContainer = new JPanel(); // primer JPanel
         GridLayout mainGrid = new GridLayout(3, 1);
         mainGrid.setHgap(3);
         mainContainer.setLayout(mainGrid);
-        add(mainContainer);
+        add(mainContainer); // añadir primer JPanel
 
-
-        JPanel inputPanel = new JPanel();
-        mainContainer.add(inputPanel);
+        inputPanel = new JPanel(); // segundo JPanel
         GridBagConstraints c = new GridBagConstraints();
         inputPanel.setLayout(new GridBagLayout());
-        JLabel labelNombrePersona = new JLabel("Nombre persona:");
+        mainContainer.add(inputPanel); // añadir segundo JPanel
+
+        labelNombrePersona = new JLabel("Nombre persona:"); // primer JLabel
         nombrePersonaInput = new JTextField(5);
         nombrePersonaInput.getDocument().addDocumentListener(new DocumentListener(){
         @Override
@@ -45,28 +47,25 @@ public class VentanaPersona extends JFrame implements ActionListener {
         public void changedUpdate (DocumentEvent e){
             crearPersonaButton.setEnabled(nombrePersonaInput.getText().length() != 0);
         }
-    });
+    }); // interfaz DocumentListener
 
-        JLabel labelTipoRecurso = new JLabel("Tipo de recurso:");
-        claseRecurosComboBox = new JComboBox<>();
-        claseRecurosComboBox.addItem("Luz");
-        claseRecurosComboBox.addItem("Agua");
+        labelTipoRecurso = new JLabel("Tipo de recurso:"); // segundo JLabel
+        claseRecursosComboBox = new JComboBox<>();
+        claseRecursosComboBox.addItem("Luz");
+        claseRecursosComboBox.addItem("Agua");
 
-
-
-        JLabel labelTipoRecurso2 = new JLabel("Tipo de Recurso:");
-        var agua = new JRadioButton("Agua");
-        agua.setActionCommand("1");
+        labelTipoRecurso2 = new JLabel("Tipo de Recurso:"); // tercer JLabel
         var luz = new JRadioButton("Luz");
-        luz.setActionCommand("2");
+        luz.setActionCommand("LUZ"); // Corrección de enum
         luz.setSelected(true);
+        var agua = new JRadioButton("Agua");
+        agua.setActionCommand("AGUA"); // Corrección de enum
         grupoRadioButtons = new ButtonGroup();
         grupoRadioButtons.add(luz);
         grupoRadioButtons.add(agua);
-        var panelTipoRecurso = new JPanel();
+        panelTipoRecurso = new JPanel(); // tercer JPanel
         panelTipoRecurso.add(luz);
         panelTipoRecurso.add(agua);
-
 
         c.gridx = 0;
         c.gridy = 0;
@@ -90,7 +89,7 @@ public class VentanaPersona extends JFrame implements ActionListener {
         c.gridy = 1;
         c.weightx = 1.0;
         c.fill = GridBagConstraints.HORIZONTAL;
-        inputPanel.add(claseRecurosComboBox, c);
+        inputPanel.add(claseRecursosComboBox, c);
 
         c.gridx = 0;
         c.gridy = 2;
@@ -102,16 +101,14 @@ public class VentanaPersona extends JFrame implements ActionListener {
         c.gridy = 2;
         c.weightx = 1.0;
         c.fill = GridBagConstraints.HORIZONTAL;
-        inputPanel.add(panelTipoRecurso, c);
+        inputPanel.add(panelTipoRecurso, c); // añadir elementos a segundo JPanel
 
-        JPanel buttonPanel = new JPanel();
+        buttonPanel = new JPanel(); // cuarto JPanel
         mainContainer.add(buttonPanel);
         crearPersonaButton = new JButton("Empezar encuesta");
         crearPersonaButton.setEnabled(false);
         crearPersonaButton.addActionListener(this);
         buttonPanel.add(crearPersonaButton);
-
-
 
         setSize(1000, 800);
         setLocationRelativeTo(null);
@@ -122,20 +119,18 @@ public class VentanaPersona extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Persona persona;
         String nombre = nombrePersonaInput.getText();
-        String recurso = claseRecurosComboBox.getSelectedItem().toString();
+        String recurso = claseRecursosComboBox.getSelectedItem().toString();
         TipoRecurso tipoRecurso = TipoRecurso.valueOf(grupoRadioButtons.getSelection().getActionCommand());
 
-        persona = switch (recurso) {
+        persona = switch (recurso) { // Recurso seleccionado en ComboBox
             case "Luz" -> new Luz(nombre, tipoRecurso);
             case "Agua" -> new Agua(nombre, tipoRecurso);
 
             default -> throw new IllegalStateException("Unexpected value: " + recurso);
-        };//Procesa el Evento capturado con la clase Luz o agua elegida
-
-
+        }; // Procesa el Evento capturado con la clase Luz o agua elegida
 
         VentanaDetalle detalleWindow = new VentanaDetalle(persona);
         //this.setVisible(false); //Para poder ejecutar la ventana (true)
-        dispose();    //borra la ventana
+        dispose();    // borra la ventana
     }
-}// Interfaces para gestión de eventos
+} // Interfaces para gestión de eventos
